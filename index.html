@@ -6,10 +6,11 @@
     <meta name="description" content="Check out our list of the 5 best laptops of 2025. Compare prices, specifications, and features to choose the best laptop for you.">
     <meta name="robots" content="index, follow">
     <title>Top 5 Best Laptops in 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Adiciona o link para a fonte Roboto -->
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Define Roboto como fonte padrão */
             background:#001ea3;
             color: #333;
             display: flex;
@@ -23,9 +24,13 @@
             align-items: center;
         }
         .blue-bar {
-            width: 50px;
-            background-color: #005279;
-            height: 100%;
+            display: none; /* Remove the blue-bar styles */
+        }
+        .blue-bar.left {
+            display: none; /* Remove the left blue-bar styles */
+        }
+        .blue-bar.right {
+            display: none; /* Remove the right blue-bar styles */
         }
         .content {
             max-width: 800px;
@@ -34,9 +39,15 @@
             background: white;
             text-align: center;
         }
-        h1, h2, h3 {
+        h1, h2 {
             text-align: center;
             margin-bottom: 30px;
+            text-decoration: underline; /* Mantém sublinhado para h1 e h2 */
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-decoration: none; /* Remove sublinhado de h3 */
         }
         .comparison-table {
             width: 100%;
@@ -73,19 +84,6 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
-        .side-bar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 10px;
-            background-color: #003366; /* Dark blue color */
-        }
-        .side-bar.left {
-            left: -15px; /* Adjust spacing from the image */
-        }
-        .side-bar.right {
-            right: -15px; /* Adjust spacing from the image */
-        }
         .buy-button {
             display: inline-block;
             padding: 10px 15px;
@@ -99,28 +97,48 @@
             background: #005bb5;
         }
         .learn-more-button {
-        display: inline-block;
-        padding: 10px 15px;
-        background: #28a745; 
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        font-size: 13px;
-        text-align: center;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-    .learn-more-button:hover {
-        background: #218838; 
-    }
+            display: inline-block;
+            padding: 10px 15px;
+            background: #28a745; 
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 13px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .learn-more-button:hover {
+            background: #218838; 
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #001ea3; /* Blue background */
+            color: #ffffff; /* White text for contrast */
+            width: 100%;
+            padding: 20px; /* Match padding with .content */
+        }
+        .header-center {
+            background-color: #ffffff; /* White background */
+            padding: 20px; /* Match padding with .content */
+            border-radius: 10px; /* Optional rounded corners */
+            max-width: 800px; /* Match the width of the .content section */
+            margin: 0 auto; /* Center align */
+            text-align: center;
+            color: #333; /* Match text color with .content */
+        }
     </style>
 </head>
 <body style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
-    <header style="text-align: center; padding: 20px; background-color: white; color: #000000; width: 100%; border-bottom: 2px solid #007acc;">
-        <img src="technanlogy_logo.jpg" alt="Technanlogy Logo" style="width: 63%; max-width: 420px; margin-bottom: 10px;">
-        <h2>Your trusted source for tech recommendations</h2>
+    <header class="header-container">
+        <div class="header-center">
+            <img src="technanlogy_logo.jpg" alt="Technanlogy Logo" style="width: 63%; max-width: 420px; margin-bottom: 10px;">
+            <h2>Your trusted source for tech recommendations</h2>
+        </div>
     </header>
     <div class="container">
         <div class="content">
@@ -181,81 +199,55 @@
             <div class="laptop">
                 <h2>1. Dell Inspiron Touchscreen Laptop</h2>
                 <div class="image-container">
-                    <div class="side-bar left"></div>
                     <img src="https://c.media-amazon.com/images/I/61Wc1fDGJuL._AC_SX466_PIbundle-3,TopRight,0,0_SH20_.jpg" alt="Dell Inspiron Touchscreen Laptop">
-                    <div class="side-bar right"></div>
                 </div>
                 <p>Perfect for students and light gamers. Comes with a 15.6" FHD screen, Intel i5 processor, and 1TB SSD.</p>
                 <a href="https://amzn.to/4ivnwA3" class="buy-button" target="_blank">Buy on Amazon</a>   <a href="learn_more_page.html" class="learn-more-button" target="_blank">Learn More</a>
-
             </div>
         
-
             <div class="laptop">
                 <h2>2. MacBook Air 2022</h2>
                 <div class="image-container">
-                    <div class="side-bar left"></div>
                     <img src="https://c.media-amazon.com/images/I/71f5Eu5lJSL._AC_SX522_.jpg" alt="MacBook Air 2022">
-                    <div class="side-bar right"></div>
                 </div>
                 <p>A powerhouse for professionals. Features a 13.6" QHD, Apple M2 chip, and 256GB SSD.</p>
                 <a href="https://amzn.to/3Ydm9yT" class="buy-button" target="_blank">Buy on Amazon</a>   <a href="learn_more_page.html" class="learn-more-button" target="_blank">Learn More</a>
-
             </div>
            
             <div class="laptop">
                 <h2>3. Lenovo ThinkPad E14 Gen 5</h2>
                 <div class="image-container">
-                    <div class="side-bar left"></div>
                     <img src="https://c.media-amazon.com/images/I/71sxwp5iwjL._AC_SX466_.jpg" alt="Lenovo ThinkPad E14 Gen 5">
-                    <div class="side-bar right"></div>
                 </div>
                 <p>A nice solid laptop. Offers long battery life and is very fast, quiet and a cool running machine.</p>
                 <a href="https://amzn.to/44EN3ne" class="buy-button" target="_blank">Buy on Amazon</a>   <a href="learn_more_page.html" class="learn-more-button" target="_blank">Learn More</a>
-
             </div>
        
-
             <div class="laptop">
                 <h2>4. HP Laptop 17</h2>
                 <div class="image-container">
-                    <div class="side-bar left"></div>
                     <img src="https://c.media-amazon.com/images/I/71OjGj5cv1L._AC_SX466_.jpg" alt="HP Laptop 17">
-                    <div class="side-bar right"></div>
                 </div>
                 <p>AMD Radeon graphics, 17.3" FHD. A very good laptop to do business things and study. Equipped with a Ryzen 5 7430U, you can do what u want.</p>
                 <a href="https://amzn.to/44c0bA2" class="buy-button" target="_blank">Buy on Amazon</a>   <a href="learn_more_page.html" class="learn-more-button" target="_blank">Learn More</a>
-
             </div>
     
-
             <div class="laptop">
                 <h2>5. ASUS TUF F15</h2>
                 <div class="image-container">
-                    <div class="side-bar left"></div>
                     <img src="https://c.media-amazon.com/images/I/81Vmg7jEobL._AC_SX466_.jpg" alt="ASUS TUF F15">
-                    <div class="side-bar right"></div>
                 </div>
                 <p>Reliable for office and personal use. Intel i5-12500H, 16GB RAM, RTX 3050, great price-performance balance.</p>
                 <a href="https://amzn.to/44GjyRW" class="buy-button" target="_blank">Buy on Amazon</a>   <a href="learn_more_page.html" class="learn-more-button" target="_blank">Learn More</a>
-
             </div>
-       
-            
-            <hr>
-            
-            <h2>In conclusion, there are plenty of amazing laptops available for under $800 in 2025, offering you excellent performance without the hefty price tag. Whether you’re looking for a laptop to handle your school projects, work tasks, or entertainment, there’s a perfect option out there. The key is to find the one that fits your specific needs while staying within your budget. No matter which one you choose, you’re sure to get great value for your money!</h2>
-            <hr>
-            <h2>Privacy Policy</h2>
-            <p>We value your privacy. Please read our <a href="privacy_policy.html" target="_blank">Privacy Policy</a> for more details on how we collect and use your information.</p>
-
-            <h3>If you have any issues with the content or the site, contact me: technanlogyptbren@gmail.com</h3>
-          
-            <h4>If I do not respond to the email within 1 day, please resend it.</h4>
-            
-            <hr>
+            <hr style="border: 1px solid blue; margin: 20px 0;">
+            <div>
+                <h2>Privacy Policy</h2>
+                <p>We value your privacy. Please read our <a href="privacy-policy.html">Privacy Policy</a> for more details on how we collect and use your information.</p>
+                <h3>If you have any issues with the content or the site, contact me: technanlogyptbren@gmail.com</h3>
+                <h4>If I do not respond to the email within 1 day, please resend it.</h4>
+                <hr>
+            </div>
         </div>
-        <div class="blue-bar"></div>
-    </div>
 </body>
 </html>
